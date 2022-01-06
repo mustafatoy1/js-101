@@ -1,0 +1,1 @@
+const mustafa = 100;
