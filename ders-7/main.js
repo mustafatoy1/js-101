@@ -7,7 +7,7 @@ arr.concat([5, 4, 2]); // 2 array birleştirmeyi sağlar
 arr.concat(yeniArray);
 
 for (let index = 0; index < arr.length; index++) {
-  console.log(array[index]);
+  console.log(arr[index]);
 }
 
 // yukarıdaki ve aşağıdaki aynı
@@ -26,16 +26,18 @@ arr.join(","); // "1,3,5,7,100,0"
 arr.join("*"); // "1*3*5*7*100*0"
 
 arr.pop(); // sondaki elemanı sil
-arr.shift(); // baştaki elemanı sil
-
 arr.push(50); // arrayin sonuna 50 sayısını ekler
+
+arr.shift(); // baştaki elemanı sil
 arr.unshift(7); // arrayin başına 7 sayısını ekler
 
 arr.reverse(); // arrayi tersine çevir
 
 arr.sort(); // arrayi küçükten büyüğe sırala
 
-arr.filter((sayi) => sayi > 2); // arrayin içindeki sayılardan sadece 2 den büyük olanları alır ve döner [3,5,7,100]
+arr.filter(function (sayi) {
+  return sayi > 2;
+}); // arrayin içindeki sayılardan sadece 2 den büyük olanları alır ve döner [3,5,7,100]
 
 arr.map((sayi) => sayi * 2); // arrayin içindeki sayıları sadece 2 ile çarpar ve döner [6,10,14,200]
 
