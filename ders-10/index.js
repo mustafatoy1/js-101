@@ -105,3 +105,46 @@ function findMax(numbers) {
 const numbers = [5, 10, 100, 7, 90000, 1, -8];
 
 console.log(findMax(numbers));
+
+/*
+
+Create a function to return the longest words in a string
+6       1  8
+uzunluklar = []
+kelimeler = kelimeleri boşluktan ayır.split ["create"....[]
+
+baştan sona tara
+  uzunluklar.push(o anki deger.length
+
+   0       1      2
+["create","a","function"....[]
+
+    0      1     2
+[   6,     1,    9     ]  // max = 9 -> 9 uzunluklar arrayinde kaçıncı indexte?  -> 2
+
+
+return uzunluklar[2]
+
+*/
+
+let findLongestWord = (text) => {
+  let lengthes = [];
+  let words = text.split(" ");
+
+  for (let index = 0; index < words.length; index++) {
+    lengthes.push(words[index].length);
+  }
+
+  let max = findMax(lengthes); // 8
+  let maxIndex = lengthes.indexOf(max); // 2
+
+  return words[maxIndex];
+};
+
+console.log(
+  findLongestWord(
+    "Create adxzddfzfzfdfdzffd function to return the longest words in a string"
+  )
+);
+
+// [1,2,3,5,7]
